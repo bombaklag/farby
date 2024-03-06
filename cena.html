@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl_1.css">
+    <title>malarz</title>
+</head>
+<body>
+    <header>
+        <h1>Malowanie pokoi i biur</h1>
+    </header>
+    <div class="bomba">
+    <section class="s1">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="mieszamy.html">Mieszamy</a></li>
+            <li><a href="cena.html">Wyceniamy</a></li>
+        </ul>
+    </section>
+    <section class="s2">
+        <h2>Zapotrzebowanie na farbe</h2>
+        <label for="liczenie">Powierzchnia malowania (m²)</label>
+        <Input type="text" id="ilosc" name="liczenie"></Input>
+        <input type="submit" value="Policz" id="liczenie">
+        <p id="wynik"></p>
+        <script>
+            addEventListener("DOMContentLoaded",licz)
+            function licz(){
+              document.getElementById("liczenie").addEventListener("click",()=>{
+                var farba=parseInt(document.getElementById("ilosc").value);
+                if(isNaN(farba)){
+                    
+
+                }
+                else{document.getElementById("wynik").innerText="Liczba potrzebnych puszek: "+(Math.ceil(farba/4))}
+    
+                
+                
+
+              })      
+
+            };
+        </script>
+    </section>
+        
+    <section class="s3">
+        <img src="obraz.png" alt="Próbki farb">
+    </section>
+    </div>
+    <footer>
+        <h3>MALARZ</h3>
+        <p>Stronę opracował Kamil Bafia</p>
+    </footer>
+</body>
+</html>
